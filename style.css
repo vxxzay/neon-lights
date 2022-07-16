@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(0, 0%, 10%);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.neon{
+    border: 8px solid #fff;
+    border-radius: 20px;
+    padding: 64px;
+
+    font-family: 'Cookie', sans-serif;
+    font-size: 160px;
+    line-height: 70%;
+    /* Adding a glow effect to border */
+    box-shadow: 
+        0 0 4px #fff,
+        0 0 16px hsl(300, 70%, 60%),
+        0 0 16px inset hsl(300, 70%, 60%);
+    /* Adding a glow effect to text */
+    text-shadow: 
+        0 0 4px #fff,
+        0 0 8px #fff,
+        0 0 16px hsl(300, 70%, 60%),
+        0 0 32px hsl(300, 70%, 60%),
+        0 0 64px hsl(300, 70%, 60%),
+        0 0 128px hsl(300, 70%, 60%);
+    animation: flicker 1s infinite alternate;
+}
+/* Adding the flickering effect */
+@keyframes flicker{
+    0%{
+        box-shadow: 
+            0 0 4px #fff,
+            0 0 16px hsl(300, 70%, 60%),
+            0 0 16px inset hsl(300, 70%, 60%);
+        text-shadow: 
+            0 0 4px #fff,
+            0 0 8px #fff,
+            0 0 16px hsl(300, 70%, 60%),
+            0 0 32px hsl(300, 70%, 60%),
+            0 0 64px hsl(300, 70%, 60%),
+            0 0 128px hsl(300, 70%, 60%);
+    }
+    100%{/* x1.5 + */
+        box-shadow: 
+            0 0 6px #fff,
+            0 0 24px hsl(300, 70%, 60%),
+            0 0 24px inset hsl(300, 70%, 60%);
+        text-shadow: 
+            0 0 6px #fff,
+            0 0 12px #fff,
+            0 0 24px hsl(300, 70%, 60%),
+            0 0 48px hsl(300, 70%, 60%),
+            0 0 96px hsl(300, 70%, 60%),
+            0 0 192px hsl(300, 70%, 60%);
+    }
+}
